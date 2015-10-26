@@ -1,13 +1,20 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Guest/Desktop/wyr/spec/models/answer_spec.rb": [
+      "/Users/Guest/Desktop/wyr/spec/features/view_questions_pages_spec.rb": [
         1,
         null,
         1,
-        2,
-        2,
-        2,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/Guest/Desktop/wyr/spec/rails_helper.rb": [
@@ -242,87 +249,38 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/wyr/config/routes.rb": [
+      "/Users/Guest/Desktop/wyr/spec/factories.rb": [
+        1,
+        1,
         1,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/Guest/Desktop/wyr/app/helpers/application_helper.rb": [
         1,
+        1,
+        null,
         null
       ],
       "/Users/Guest/Desktop/wyr/app/models/answer.rb": [
         1,
         1,
         1,
+        null
+      ],
+      "/Users/Guest/Desktop/wyr/config/routes.rb": [
+        1,
         1,
         null
       ],
-      "/Users/Guest/Desktop/wyr/spec/models/question_spec.rb": [
+      "/Users/Guest/Desktop/wyr/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/wyr/spec/models/answer_spec.rb": [
         1,
         null,
         1,
         2,
         2,
-        null
-      ],
-      "/Users/Guest/Desktop/wyr/app/models/question.rb": [
-        1,
-        1,
-        1,
         null
       ],
       "/Users/Guest/Desktop/wyr/spec/models/vote_spec.rb": [
@@ -336,8 +294,22 @@
         1,
         1,
         null
+      ],
+      "/Users/Guest/Desktop/wyr/app/controllers/answers_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/wyr/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
       ]
     },
-    "timestamp": 1445877404
+    "timestamp": 1445878761
   }
 }
