@@ -1,3 +1,5 @@
+<%= render "layouts/errors", :object => Comment.new %>
+
 <div id="comment-form">
   <h2>New Comment</h2>
   <%= form_for [@answer.question, Comment.new], remote:true do |f| %>

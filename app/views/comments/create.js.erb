@@ -1,2 +1,9 @@
-$('#comment-form').hide()
-$("#question_<%= @question.id %>").append('<%= @comment.body %>')
+<% if @comment.save %>
+  $('#errors').hide()
+  $('#comment-form').hide()
+  <% @question.comments.each do |comment| %>
+    $("#question_<%= @question.id %>").append('<%= comment.body %>')
+  <% end %>
+<% else %>
+  $('body').before('<%= j render "layouts/errors", :object => @comment %>')
+<% end %>

@@ -28,4 +28,12 @@ describe 'the answers path' do
     click_on 'Submit'
     expect(page).to have_content 'tadow!'
   end
+
+  it 'will display an error if comment form is submitted blankly', js: true do
+    visit questions_path
+    click_on @answer_1.body
+    fill_in 'Body', :with => ''
+    click_on 'Submit'
+    expect(page).to have_content 'errors'
+  end
 end
