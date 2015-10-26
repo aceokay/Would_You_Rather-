@@ -1,3 +1,3 @@
-$("#question_<%= @answer.question.id %> li").each(function() {
-  $(this).find('p').show();
-});
+<% @answer.question.answers.each do |answer| %>
+  $("#answer_<%= answer.id %> span").text("<%= answer.votes.count %>")
+<% end %>

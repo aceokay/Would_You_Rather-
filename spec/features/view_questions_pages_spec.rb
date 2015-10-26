@@ -13,10 +13,11 @@ describe 'the answers path' do
     expect(page).to have_content @answer_2.body
   end
 
-  it 'can select an answer' do
+  it 'can select an answer', js: true do
     visit questions_path
     click_on @answer_1.body
-    expect(page).to have_selector "#answer_#{@answer_1.id} p", :text => 1
-    expect(page).to have_selector "#answer_#{@answer_2.id} p", :text => 0
+
+    expect(page).to have_selector "#answer_#{@answer_1.id}", :text => 'Votes: 1'
+    expect(page).to have_selector "#answer_#{@answer_2.id}", :text => 'Votes: 0'
   end
 end

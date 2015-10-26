@@ -1,14 +1,13 @@
+<h1>Page Loaded</h1>
 <ul>
   <% @questions.each do |question| %>
   <div id="question_<%= question.id %>">
     <h4>Would You Rather?</h4>
     <ul>
       <% question.answers.each do |answer| %>
-        <li>
-          <%= link_to answer.body, new_answer_vote_path(answer), id: "answer_#{answer.id}", class: "new_answer_vote_link", remote: true %>
-          <p hidden>
-            <%= answer.votes.count %>
-          </p>
+        <li id="answer_<%= answer.id %>">
+          <%= link_to answer.body, new_answer_vote_path(answer), class: "new_answer_vote_link", remote: true %>
+          Votes: <span></span>
         </li>
       <% end %>
     </ul>
