@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+questions = 3.times.collect do
+  Question.create()
+end
+
+questions.each do |question|
+  question.answers.create([{ body: 'eat cheese' }, { body: 'not eat cheese' }])
+end

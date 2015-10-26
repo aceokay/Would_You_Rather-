@@ -1,4 +1,7 @@
 FactoryGirl.define do
+  factory :question do
+  end
+
   factory :answer_1, class: Answer do
     body 'soak in tub water that has already been used'
   end
