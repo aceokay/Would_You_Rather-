@@ -20,4 +20,12 @@ describe 'the answers path' do
     expect(page).to have_selector "#answer_#{@answer_1.id}", :text => 'Votes: 1'
     expect(page).to have_selector "#answer_#{@answer_2.id}", :text => 'Votes: 0'
   end
+
+  it 'can add a comment after selecting an answer' do
+    visit questions_path
+    click_on @answer_1.body
+    fill_in '.comments', :with => 'tadow!'
+    click_on 'Submit'
+    expect(page).to have_content 'tadow!'
+  end
 end
