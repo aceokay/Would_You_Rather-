@@ -21,10 +21,10 @@ describe 'the answers path' do
     expect(page).to have_selector "#answer_#{@answer_2.id}", :text => 'Votes: 0'
   end
 
-  it 'can add a comment after selecting an answer' do
+  it 'can add a comment after selecting an answer', js: true do
     visit questions_path
     click_on @answer_1.body
-    fill_in '.comments', :with => 'tadow!'
+    fill_in 'Body', :with => 'tadow!'
     click_on 'Submit'
     expect(page).to have_content 'tadow!'
   end

@@ -29,8 +29,8 @@
         1,
         1,
         1,
-        0,
-        0,
+        1,
+        1,
         null,
         null
       ],
@@ -307,6 +307,10 @@
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/Guest/Desktop/wyr/app/helpers/application_helper.rb": [
@@ -365,7 +369,7 @@
       "/Users/Guest/Desktop/wyr/app/controllers/questions_controller.rb": [
         1,
         1,
-        4,
+        3,
         null,
         null
       ],
@@ -382,13 +386,35 @@
         2,
         2,
         2,
-        3,
+        2,
         2,
         null,
         null,
         null
+      ],
+      "/Users/Guest/Desktop/wyr/app/controllers/comments_controller.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1445897476
+    "timestamp": 1445899666
   }
 }

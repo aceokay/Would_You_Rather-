@@ -1,3 +1,4 @@
 <% @answer.question.answers.each do |answer| %>
   $("#answer_<%= answer.id %> span").text("<%= answer.votes.count %>")
 <% end %>
+$("#question_<%= @answer.question.id %>").after('<%= j render "comments/form" %>')
