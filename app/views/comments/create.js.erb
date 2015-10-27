@@ -2,9 +2,9 @@
 
   $('#errors').hide();
   $('#comment-form-area').remove();
+
   // render comment listing partial
   $("#question_<%= @answer.question.id %>").append('<%= j render "comment", answer: @answer %>');
-
 <% else %>
   // render errors
   $('body').before('<%= j render "layouts/errors", :object => @comment %>');

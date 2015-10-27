@@ -1,6 +1,8 @@
+<% answer_counts = [@answer.question.answers.first.votes.count, @answer.question.answers.last.votes.count] %>
 // show this question's answer's votes
 <% @answer.question.answers.each do |answer| %>
-  $("#answer_<%= answer.id %> span").text("<%= answer.votes.count %>")
+  <% vote_percentage = (answer.votes.count * 10 / (answer_counts.first + answer_counts.last) * 10) %>
+  $("#answer_<%= answer.id %> span").text("<%= answer.votes.count %>").append(", <strong><%= vote_percentage %>%</strong>")
 <% end %>
 
 // remove any existing comment forms
