@@ -315,6 +315,7 @@
         1,
         1,
         1,
+        1,
         null
       ],
       "/Users/Guest/Desktop/wyr/config/routes.rb": [
@@ -345,6 +346,7 @@
         2,
         2,
         2,
+        2,
         null
       ],
       "/Users/Guest/Desktop/wyr/spec/models/comment_spec.rb": [
@@ -366,11 +368,9 @@
         null,
         1,
         2,
-        2,
         null
       ],
       "/Users/Guest/Desktop/wyr/app/models/question.rb": [
-        1,
         1,
         1,
         null
@@ -419,6 +419,7 @@
         1,
         2,
         2,
+        null,
         2,
         2,
         2,
@@ -432,6 +433,6 @@
         null
       ]
     },
-    "timestamp": 1445966202
+    "timestamp": 1445970731
   }
 }

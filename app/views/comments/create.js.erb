@@ -1,15 +1,11 @@
 <% if @comment.save %>
 
-  $('#errors').hide()
-  $('#comment-form-area').remove()
-  // comment listing
-  $("#question_<%= @question.id %>").append('<ul>')
-  <% @question.comments.each do |comment| %>
-    $("#question_<%= @question.id %>").append('<li><pre><%= comment.body %></pre></li>')
-  <% end %>
-  $("#question_<%= @question.id %>").append('</ul>')
+  $('#errors').hide();
+  $('#comment-form-area').remove();
+  // render comment listing partial
+  $("#question_<%= @answer.question.id %>").append('<%= j render "comment", answer: @answer %>');
 
 <% else %>
   // render errors
-  $('body').before('<%= j render "layouts/errors", :object => @comment %>')
+  $('body').before('<%= j render "layouts/errors", :object => @comment %>');
 <% end %>

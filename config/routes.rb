@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :answers
   end
 
-  resources :questions do
+  resources :answers do
     resources :comments
   end
 
