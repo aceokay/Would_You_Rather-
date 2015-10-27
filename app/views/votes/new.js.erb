@@ -1,4 +1,7 @@
 <% @answer.question.answers.each do |answer| %>
   $("#answer_<%= answer.id %> span").text("<%= answer.votes.count %>")
 <% end %>
+$('#comment-form').each(function() {
+  $(this).remove();
+})
 $("#question_<%= @answer.question.id %>").after('<%= j render "comments/form" %>')
