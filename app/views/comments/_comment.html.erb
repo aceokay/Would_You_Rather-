@@ -1,9 +1,18 @@
-<ul>
-  <% answer.comments.each do |comment| %>
-    <li>
-      <pre>
-        <%= comment.body %>
-      </pre>
-    </li>
-  <% end %>
-</ul>
+<h3>Comments</h3>
+<div class="container">
+  <ul>
+    <% answer.question.answers.each do |answer| %>
+      <h4><%= answer.body %></h4>
+      <% answer.comments.each do |comment| %>
+        <li>
+          <pre>
+            <h5>
+              <%= comment.body %>
+              <small><%= comment.created_at.localtime %></small>
+            </h5>
+          </pre>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
