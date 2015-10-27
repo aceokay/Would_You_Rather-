@@ -21,6 +21,17 @@ describe 'the answers path' do
     expect(page).to have_selector "#answer_#{@answer_2.id}", :text => 'Votes: 0'
   end
 
+  it 'can only select an answer for a question once', js: true do
+    visit questions_path
+    click_on @answer_1.body
+
+    expect(page).to have_selector "#answer_#{@answer_1.id}", :text => 'Votes: 1'
+    expect(page).to have_selector "#answer_#{@answer_2.id}", :text => 'Votes: 0'
+
+    expect(page).to_not have_link @answer_1.body
+    expect(page).to_not have_link @answer_2.body
+  end
+
   it 'can add a comment after selecting an answer', js: true do
     visit questions_path
     click_on @answer_1.body

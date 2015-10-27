@@ -1,7 +1,17 @@
+// show this question's answer's votes
 <% @answer.question.answers.each do |answer| %>
   $("#answer_<%= answer.id %> span").text("<%= answer.votes.count %>")
 <% end %>
-$('#comment-form').each(function() {
+
+// remove any existing comment forms
+$('#comment-form-area').each(function() {
   $(this).remove();
-})
+});
+
+// render the comment form!
 $("#question_<%= @answer.question.id %>").after('<%= j render "comments/form" %>')
+
+// disable this question's answer links
+<% @answer.question.answers.each do |answer| %>
+  $('#answer_link_<%= answer.id %>').removeAttr('href');
+<% end %>
