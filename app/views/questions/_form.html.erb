@@ -1,0 +1,14 @@
+<div id="question_answer_form">
+  <%= form_for @question do |f| %>
+    Answer options for would you rather...
+    <ul>
+      <%= f.fields_for :answers do |answer_form| %>
+        <li>
+          <%= answer_form.label :body, 'Option' %>
+          <%= answer_form.text_field :body %>
+        </li>
+      <% end %>
+    </ul>
+    <%= f.submit 'Submit' %>
+  <% end %>
+</div>
