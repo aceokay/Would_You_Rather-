@@ -1,17 +1,7 @@
 <h1>The Worst Song</h1>
-<ul>
+<ul id="questions_listing">
   <% @questions.each do |question| %>
-  <div id="question_<%= question.id %>">
-    <h4>Would You Rather?</h4>
-    <ul>
-      <% question.answers.each do |answer| %>
-        <li id="answer_<%= answer.id %>">
-          <%= link_to answer.body, new_answer_vote_path(answer), id: "answer_link_#{answer.id}", class: "new_answer_vote_link", remote: true %>
-          Votes: <span></span>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+    <%= render question %>
   <% end %>
 </ul>
 

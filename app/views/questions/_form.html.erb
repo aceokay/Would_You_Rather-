@@ -1,5 +1,5 @@
 <div id="question_answer_form">
-  <%= form_for @question do |f| %>
+  <%= form_for @question, remote: true do |f| %>
     Answer options for would you rather...
     <ul>
       <%= f.fields_for :answers do |answer_form| %>
