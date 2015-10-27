@@ -1,3 +1,8 @@
-$('#question_answer_form').hide()
-$('#new_question a').show()
-$('#questions_listing').append('<%= j render @question %>')
+$('#new_answer_error').remove()
+<% if @saved %>
+  $('#question_answer_form').hide()
+  $('#new_question a').show()
+  $('#questions_listing').append('<%= j render @question %>')
+<% else %>
+  $('body').append('<span id="new_answer_error"><strong>Please supply text for answer(s)</strong></span>')
+<% end %>

@@ -35,6 +35,7 @@ describe 'the answers path' do
   it 'can add a comment after selecting an answer', js: true do
     visit questions_path
     click_on @answer_1.body
+    click_on 'Add Comment'
     fill_in 'Body', :with => 'tadow!'
     click_on 'Submit'
     expect(page).to have_content 'tadow!'
@@ -43,6 +44,7 @@ describe 'the answers path' do
   it 'will display an error if comment form is submitted blankly', js: true do
     visit questions_path
     click_on @answer_1.body
+    click_on 'Add Comment'
     fill_in 'Body', :with => ''
     click_on 'Submit'
     expect(page).to have_content 'errors'

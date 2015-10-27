@@ -10,14 +10,19 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.new(question_params)
-    if @question.save
+    @saved = @question.save
+    if @saved
       respond_to do |format|
         format.html { redirect_to questions_path }
         format.js
       end
     else
-      flash[:alert] = 'Please supply text for answer options'
-      redirect_to questions_path
+      respond_to do |format|
+        format.html { redirect_to questions_path }
+        format.js { 'Please supply text for answer options'}
+      end
+      # flash[:alert] = 'Please supply text for answer options'
+      # redirect_to questions_path
     end
   end
 
